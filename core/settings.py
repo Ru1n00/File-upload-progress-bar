@@ -38,6 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
+    # my apps
+    'file_upload.apps.FileUploadConfig',
 ]
 
 MIDDLEWARE = [
