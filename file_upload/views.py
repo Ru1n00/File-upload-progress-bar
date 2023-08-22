@@ -14,3 +14,10 @@ class CreateUploadFile(SuccessMessageMixin, CreateView):
     
     def get_success_message(self, cleaned_data):
         return 'File uploaded successfully'
+
+
+def get_files(request):
+    files = UploadFile.objects.all()
+    for file in files:
+        print(file, file.file.url)
+    return render(request, 'file_upload/index.html', {'files': files})
